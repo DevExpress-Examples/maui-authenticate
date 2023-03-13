@@ -54,7 +54,7 @@ Perform the following steps to run the project:
       }
     ```
 
-    Include the token in request’s [HttpClient.DefaultRequestHeaders.Authorization](xref:System.Net.Http.HttpClient.DefaultRequestHeaders) header to allow all subsequent requests access private endoints and data: 
+    Include the token in request’s [HttpClient.DefaultRequestHeaders.Authorization](https://learn.microsoft.com/en-us/dotnet/api/system.net.http.headers.httprequestheaders.authorization?view=net-7.0) header to allow all subsequent requests access private endoints and data: 
 
     ```csharp
     HttpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", await tokenResponse.Content.ReadAsStringAsync());
@@ -62,13 +62,13 @@ Perform the following steps to run the project:
 
   File to Look At: [WebAPIService.cs](CS/MAUI/Services/WebAPIService.cs)
 
-* To create users and specify their passwords, use the `Updater.UpdateDatabaseAfterUpdateSchema` method. You can modify a user's password directly in the database or use the full version of our [XAF UI](xref:112649#end-user-password-modifications).
+* To create users and specify their passwords, use the `Updater.UpdateDatabaseAfterUpdateSchema` method. You can modify a user's password directly in the database or use the full version of our [XAF UI](https://docs.devexpress.com/eXpressAppFramework/112649/data-security-and-safety/security-system/authentication/passwords-in-the-security-system).
 
     File to Look At: [Updater.cs](CS/WebAPI/DatabaseUpdate/Updater.cs)
 
 ### Login UI and View Model
 
-* Use the [TextEdit.StartIcon](xref:DevExpress.Maui.Editors.EditBase.StartIcon) and [PasswordEdit.StartIcon](xref:DevExpress.Maui.Editors.EditBase.StartIcon) properties to display icons in the [TextEdit](xref:DevExpress.Maui.Editors.TextEdit) and [PasswordEdit](xref:DevExpress.Maui.Editors.PasswordEdit) controls.
+* Use the [TextEdit.StartIcon](https://docs.devexpress.com/MAUI/DevExpress.Maui.Editors.EditBase.StartIcon) and [PasswordEdit.StartIcon](https://docs.devexpress.com/MAUI/DevExpress.Maui.Editors.EditBase.StartIcon) properties to display icons in the [TextEdit](https://docs.devexpress.com/MAUI/DevExpress.Maui.Editors.TextEdit) and [PasswordEdit](https://docs.devexpress.com/MAUI/DevExpress.Maui.Editors.PasswordEdit) controls.
 
     ```xaml
     <dxe:TextEdit LabelText="Login" StartIcon="editorsname" .../>
@@ -77,7 +77,7 @@ Perform the following steps to run the project:
 
     File to Look At: [LoginPage.xaml](CS/MAUI/Views/LoginPage.xaml)
 
-* To validate the [PasswordEdit](xref:DevExpress.Maui.Editors.PasswordEdit) control's value, use the [EditBase.HasError](xref:DevExpress.Maui.Editors.EditBase.HasError) and [EditBase.ErrorText](xref:DevExpress.Maui.Editors.EditBase.ErrorText) inherited properties.
+* To validate the [PasswordEdit](https://docs.devexpress.com/MAUI/DevExpress.Maui.Editors.PasswordEdit) control's value, use the [EditBase.HasError](https://docs.devexpress.com/MAUI/DevExpress.Maui.Editors.EditBase.HasError) and [EditBase.ErrorText](https://docs.devexpress.com/MAUI/DevExpress.Maui.Editors.EditBase.ErrorText) inherited properties.
 
     ```xaml
     <dxe:PasswordEdit ... HasError="{Binding HasError}" ErrorText="{Binding ErrorText}"/>
@@ -118,8 +118,8 @@ Perform the following steps to run the project:
     File to Look At: [LoginViewModel.cs](CS/MAUI/ViewModels/LoginViewModel.cs)
 
 
-* Specify the [TextEdit.ReturnType](xref:DevExpress.Maui.Editors.EditBase.ReturnType) inherited property to focus the [PasswordEdit](xref:DevExpress.Maui.Editors.PasswordEdit) control after the [TextEdit](xref:DevExpress.Maui.Editors.TextEdit) control's value is edited.
-* Bind the [PasswordEdit.ReturnCommand](xref:DevExpress.Maui.Editors.EditBase.ReturnCommand) property to the **Login** command to execute the command when you enter the password:
+* Specify the [TextEdit.ReturnType](https://docs.devexpress.com/MAUI/DevExpress.Maui.Editors.EditBase.ReturnType) inherited property to focus the [PasswordEdit](https://docs.devexpress.com/MAUI/DevExpress.Maui.Editors.PasswordEdit) control after the [TextEdit](https://docs.devexpress.com/MAUI/DevExpress.Maui.Editors.TextEdit) control's value is edited.
+* Bind the [PasswordEdit.ReturnCommand](https://docs.devexpress.com/MAUI/DevExpress.Maui.Editors.EditBase.ReturnCommand) property to the **Login** command to execute the command when you enter the password:
 
     ```xaml
     <dxe:PasswordEdit ReturnCommand="{Binding LoginCommand}"/>
