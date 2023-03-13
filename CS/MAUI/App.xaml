@@ -1,0 +1,36 @@
+﻿<Application
+    x:Class="MAUI.App"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:MAUI"
+    xmlns:windows="clr-namespace:Microsoft.Maui.Controls.PlatformConfiguration.WindowsSpecific;assembly=Microsoft.Maui.Controls"
+    windows:Application.ImageDirectory="Assets">
+    <Application.Resources>
+        <ResourceDictionary>
+            <Color x:Key="Primary">#6750A4</Color>
+            <Color x:Key="PrimaryLight">#D0BCFF</Color>
+            <Color x:Key="Gray50">#F2F2F7</Color>
+            <Color x:Key="Gray200">#C8C8C8</Color>
+            <Color x:Key="Gray950">#141414</Color>
+            <Color x:Key="NormalText">#55575c</Color>
+            <Color x:Key="TitleTextColor">White</Color>
+            <Color x:Key="NormalBackgroundColor">White</Color>
+            <Style TargetType="NavigationPage">
+                <Setter Property="BarBackgroundColor" Value="{AppThemeBinding Light={StaticResource TitleTextColor}, Dark={StaticResource Gray950}}" />
+                <Setter Property="BarTextColor" Value="White" />
+            </Style>
+            <Style TargetType="Label">
+                <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Gray950}, Dark={StaticResource TitleTextColor}}"  />
+            </Style>
+            <Style x:Key="ShellStyle" TargetType="Shell">
+                <Setter Property="Shell.BackgroundColor" Value="{StaticResource Primary}" />
+                <Setter Property="Shell.TitleColor" Value="{StaticResource TitleTextColor}" />
+                <Setter Property="Shell.ForegroundColor" Value="{StaticResource TitleTextColor}" />
+                <Setter Property="Shell.TabBarBackgroundColor" Value="{StaticResource NormalBackgroundColor}" />
+                <Setter Property="Shell.TabBarForegroundColor" Value="{StaticResource Primary}" />
+                <Setter Property="Shell.TabBarTitleColor" Value="{StaticResource Primary}" />
+                <Setter Property="Shell.TabBarUnselectedColor" Value="{StaticResource NormalText}" />
+            </Style>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>
