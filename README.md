@@ -192,7 +192,7 @@ For more information, please refer to [Connect to local web services from Androi
 
 ## Documentation
 
-* [Featured Scenario: Authenticate](https://docs.devexpress.com/MAUI/404316)
+* [Featured Scenario: Authenticate](https://docs.devexpress.com/MAUI/404307)
 * [Featured Scenarios](https://docs.devexpress.com/MAUI/404291)
 * [Create a Standalone Web API Application](https://docs.devexpress.com/eXpressAppFramework/403401/backend-web-api-service/create-new-application-with-web-api-service?p=net6)
 
