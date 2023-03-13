@@ -17,7 +17,7 @@ Perform the following steps to run the project:
 
 2. Choose the `WebApi` item in the **debug** dropdown menu. From this menu, you can debug the project on the [Kestrel](https://learn.microsoft.com/en-us/aspnet/core/fundamentals/servers/kestrel?view=aspnetcore-7.0) web server.
 
-    ![Run Settings](images/authenticate-run-settings.png)
+    ![Run Settings](images/authenticate-run-settings@2x.png)
 
     If you prefer **IIS Express** instead of `Kestrel`, you need to select the IIS Express on the **debug** dropdown menu, open the `.vs\MAUI_WebAPI\config\applicationhost.config` in an external text editor, and add the following code:
 
