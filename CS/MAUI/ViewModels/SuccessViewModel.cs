@@ -16,7 +16,7 @@ namespace MAUI.ViewModels {
         }
         public SuccessViewModel() {
             Header = "Success!";
-            Info = "Now you can send requests to the WebAPI service to get data based on your permissions \nPlease see the 'Role-based data access' example to learn more";
+            Info = "Now you can send requests to the WebAPI service to get data based on your permissions. \nPlease see the 'Role-based data access' example to learn more.";
         }
     }
 }
