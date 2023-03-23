@@ -1,6 +1,6 @@
 # Authenticate Users with the WebAPI Service
 
-Our free [.NET App Security Library](https://www.devexpress.com/products/net/application_framework/security-web-api-service.xml) includes a wizard that generates a ready-to-use authentication service. This service uses the [Entity Framework Core](https://docs.microsoft.com/en-us/ef/core/) ORM to access a database. 
+This example shows how to use our free [.NET App Security Library](https://www.devexpress.com/products/net/application_framework/security-web-api-service.xml) to implement authentication in your .NET MAUI application. The [.NET App Security Library](https://www.devexpress.com/products/net/application_framework/security-web-api-service.xml) includes a wizard that generates a ready-to-use authentication service. This service uses the [Entity Framework Core](https://docs.microsoft.com/en-us/ef/core/) ORM to access a database.    
 
 You can find more information about our WebAPI Service's access restrictions in the following topic and video:
 
@@ -8,6 +8,9 @@ You can find more information about our WebAPI Service's access restrictions in 
 
 [A 1-Click Solution for CRUD Web API with Role-based Access Control via EF Core & ASP.NET](https://www.youtube.com/watch?v=T7y4gwc1n4w&list=PL8h4jt35t1wiM1IOux04-8DiofuMEB33G)
 
+## Prerequisites
+
+[SQL Server](https://www.microsoft.com/en-us/sql-server/sql-server-downloads), if you run this solution on Windows.
 
 ## Run Projects
 
