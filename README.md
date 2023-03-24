@@ -1,12 +1,12 @@
-# Authenticate Users with the WebAPI Service
+# Authenticate Users with the DevExpress Web API Service
 
-This example shows how to use our free [.NET App Security Library](https://www.devexpress.com/products/net/application_framework/security-web-api-service.xml) to implement authentication in your .NET MAUI application. The [.NET App Security Library](https://www.devexpress.com/products/net/application_framework/security-web-api-service.xml) includes a wizard that generates a ready-to-use authentication service. This service uses the [Entity Framework Core](https://docs.microsoft.com/en-us/ef/core/) ORM to access a database.    
+This example shows how to use our free [.NET App Security Library & Web API Service](https://www.devexpress.com/products/net/application_framework/security-web-api-service.xml) to implement authentication in your .NET MAUI application. A wizard help you generate a ready-to-use authentication service. This service uses the [Entity Framework Core](https://docs.microsoft.com/en-us/ef/core/) ORM to access a database.    
 
-You can find more information about our WebAPI Service's access restrictions in the following topic and video:
+You can find more information about our Web API Service's access restrictions in the following resources:
 
-[Create a Standalone Web API Application](https://docs.devexpress.com/eXpressAppFramework/403401/backend-web-api-service/create-new-application-with-web-api-service?p=net6)
+[Article: Create a Standalone Web API Application](https://docs.devexpress.com/eXpressAppFramework/403401/backend-web-api-service/create-new-application-with-web-api-service?p=net6)
 
-[A 1-Click Solution for CRUD Web API with Role-based Access Control via EF Core & ASP.NET](https://www.youtube.com/watch?v=T7y4gwc1n4w&list=PL8h4jt35t1wiM1IOux04-8DiofuMEB33G)
+[Video: A 1-Click Solution for CRUD Web API with Role-based Access Control via EF Core & ASP.NET](https://www.youtube.com/watch?v=T7y4gwc1n4w&list=PL8h4jt35t1wiM1IOux04-8DiofuMEB33G)
 
 ## Prerequisites
 
@@ -14,15 +14,14 @@ You can find more information about our WebAPI Service's access restrictions in 
 
 ## Run Projects
 
-Perform the following steps to run the project:
 
-1. Open the `WebAPI` solution in the Visual Studio as an administrator. This is required to create the database whose settings are defined in the `appsettings.json` file.
+1. Open the `WebAPI` solution. Run Visual Studio as an administrator so that the IDE can create the database as defined in `appsettings.json`.
 
-2. Choose the `WebApi` item in the **debug** dropdown menu. From this menu, you can debug the project on the [Kestrel](https://learn.microsoft.com/en-us/aspnet/core/fundamentals/servers/kestrel?view=aspnetcore-7.0) web server.
+2. Choose the `WebApi` item in the **debug** dropdown menu. This selection will debug the project on the [Kestrel](https://learn.microsoft.com/en-us/aspnet/core/fundamentals/servers/kestrel?view=aspnetcore-7.0) web server.
 
     ![Run Settings](images/authenticate-run-settings@2x.png)
 
-    If you prefer **IIS Express** instead of `Kestrel`, you need to select the IIS Express on the **debug** dropdown menu, open the `.vs\MAUI_WebAPI\config\applicationhost.config` in an external text editor, and add the following code:
+    If you prefer IIS Express to Kestrel, select **IIS Express** on the **debug** dropdown menu. Use an external text editor to add the following code to `.vs\MAUI_WebAPI\config\applicationhost.config`:
 
     ```xaml
     <sites>
@@ -39,15 +38,15 @@ Perform the following steps to run the project:
     </sites>
     ```
 
-3. Right-click the MAUI project, choose `Set as Startup Project` and select your emulator. Note that physical devices that are attached over USB do not allow you to access your machine's localhost.
-4. Right-click the `WebAPI` project and select `Debug > Start new instance` to run the `WebAPI` project.
-5. Right-click the `MAUI` project and select `Debug > Start new instance` to run the `MAUI` project.
+3. Right-click the MAUI project, choose `Set as Startup Project`, and select your emulator. Note that physical devices that are attached over USB do not allow you to access your machine's localhost.
+4. Right-click the `WebAPI` project and select `Debug > Start new instance`.
+5. Right-click the `MAUI` project and select `Debug > Start new instance`.
 
 ## Implementation Details
 
 ### Service and Communication
 
-* The WebAPI service uses json web tokens (JWT) to authorize users. Call `WebAPI`'s **Authenticate** endpoint and pass a username and password to the endpoint from the .NET MAUI application. In the example, this logic is implemented in the `WebAPIService.RequestTokenAsync` method:
+* DevExpress Web API Service uses JSON Web Tokens (JWT) to authorize users. Call `WebAPI`'s **Authenticate** endpoint and pass a username and password to the endpoint from the .NET MAUI application. In this example, token generation logic is implemented in the `WebAPIService.RequestTokenAsync` method:
   
     ```csharp
       private async Task<HttpResponseMessage> RequestTokenAsync(string userName, string password) {
@@ -57,7 +56,7 @@ Perform the following steps to run the project:
       }
     ```
 
-    Include the token in request’s [HttpClient.DefaultRequestHeaders.Authorization](https://learn.microsoft.com/en-us/dotnet/api/system.net.http.headers.httprequestheaders.authorization?view=net-7.0) header to allow all subsequent requests access private endoints and data: 
+    Include the token into [HttpClient.DefaultRequestHeaders.Authorization](https://learn.microsoft.com/en-us/dotnet/api/system.net.http.headers.httprequestheaders.authorization?view=net-7.0). All subsequent requests will be able to access private endpoints and data: 
 
     ```csharp
     HttpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", await tokenResponse.Content.ReadAsStringAsync());
@@ -122,7 +121,7 @@ Perform the following steps to run the project:
 
 
 * Specify the [TextEdit.ReturnType](https://docs.devexpress.com/MAUI/DevExpress.Maui.Editors.EditBase.ReturnType) inherited property to focus the [PasswordEdit](https://docs.devexpress.com/MAUI/DevExpress.Maui.Editors.PasswordEdit) control after the [TextEdit](https://docs.devexpress.com/MAUI/DevExpress.Maui.Editors.TextEdit) control's value is edited.
-* Bind the [PasswordEdit.ReturnCommand](https://docs.devexpress.com/MAUI/DevExpress.Maui.Editors.EditBase.ReturnCommand) property to the **Login** command to execute the command when you enter the password:
+* Bind the [PasswordEdit.ReturnCommand](https://docs.devexpress.com/MAUI/DevExpress.Maui.Editors.EditBase.ReturnCommand) property to the **Login** command to execute the command when a user enters the password:
 
     ```xaml
     <dxe:PasswordEdit ReturnCommand="{Binding LoginCommand}"/>
@@ -180,11 +179,11 @@ Android emulator and iOS simulator request a certificate to access a service ove
 </dict>
 ```
 
-This allows you to bypass the certificate check and avoid creating a development certificate and implementing HttpClient handlers.
+This allows you to bypass the certificate check. You don't need to create a development certificate or implement HttpClient handlers.
 
 For more information, please refer to [Connect to local web services from Android emulators and iOS simulators](https://learn.microsoft.com/en-us/dotnet/maui/data-cloud/local-web-services?view=net-maui-7.0#android-network-security-configuration).
 
-**We highly recommend using HTTP only for debug and development purposes. In production, use HTTPS for security reasons.**
+**We highly recommend that you use HTTP only when you develop/debug your application. In production, use HTTPS for security reasons.**
 
 ## Files to Look At
 
