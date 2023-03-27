@@ -1,6 +1,6 @@
 # Authenticate Users with the DevExpress Web API Service
 
-This example shows how to use our free [.NET App Security Library & Web API Service](https://www.devexpress.com/products/net/application_framework/security-web-api-service.xml) to implement authentication in your .NET MAUI application. A wizard help you generate a ready-to-use authentication service. This service uses the [Entity Framework Core](https://docs.microsoft.com/en-us/ef/core/) ORM to access a database.    
+This example shows how to use our free [.NET App Security Library & Web API Service](https://www.devexpress.com/products/net/application_framework/security-web-api-service.xml) to implement authentication in your .NET MAUI application. A wizard helps you generate a ready-to-use authentication service. This service uses the [Entity Framework Core](https://docs.microsoft.com/en-us/ef/core/) ORM to access a database.    
 
 You can find more information about our Web API Service's access restrictions in the following resources:
 
@@ -21,7 +21,7 @@ You can find more information about our Web API Service's access restrictions in
 
     ![Run Settings](images/authenticate-run-settings@2x.png)
 
-    If you prefer IIS Express to Kestrel, select **IIS Express** on the **debug** dropdown menu. Use an external text editor to add the following code to `.vs\MAUI_WebAPI\config\applicationhost.config`:
+    If you prefer IIS Express to Kestrel, select **IIS Express** from the **debug** drop-down menu, and use an external text editor to add the following code to `.vs\MAUI_WebAPI\config\applicationhost.config`:
 
     ```xaml
     <sites>
@@ -56,7 +56,7 @@ You can find more information about our Web API Service's access restrictions in
       }
     ```
 
-    Include the token into [HttpClient.DefaultRequestHeaders.Authorization](https://learn.microsoft.com/en-us/dotnet/api/system.net.http.headers.httprequestheaders.authorization?view=net-7.0). All subsequent requests will be able to access private endpoints and data: 
+    Include the token in [HttpClient.DefaultRequestHeaders.Authorization](https://learn.microsoft.com/en-us/dotnet/api/system.net.http.headers.httprequestheaders.authorization?view=net-7.0). All subsequent requests can then access private endpoints and data: 
 
     ```csharp
     HttpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", await tokenResponse.Content.ReadAsStringAsync());
@@ -179,11 +179,11 @@ Android emulator and iOS simulator request a certificate to access a service ove
 </dict>
 ```
 
-This allows you to bypass the certificate check. You don't need to create a development certificate or implement HttpClient handlers.
+This allows you to bypass the certificate check without the need to create a development certificate or implement HttpClient handlers.
 
 For more information, please refer to [Connect to local web services from Android emulators and iOS simulators](https://learn.microsoft.com/en-us/dotnet/maui/data-cloud/local-web-services?view=net-maui-7.0#android-network-security-configuration).
 
-**We highly recommend that you use HTTP only when you develop/debug your application. In production, use HTTPS for security reasons.**
+**We recommend that you use HTTP only when you develop/debug your application. In production, use HTTPS for security reasons.**
 
 ## Files to Look At
 
