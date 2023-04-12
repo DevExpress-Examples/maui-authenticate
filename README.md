@@ -1,3 +1,7 @@
+<!-- default badges list -->
+![](https://img.shields.io/endpoint?url=https://codecentral.devexpress.com/api/v1/VersionRange/626786752/22.2.3%2B)
+[![](https://img.shields.io/badge/📖_How_to_use_DevExpress_Examples-e9f6fc?style=flat-square)](https://docs.devexpress.com/GeneralInformation/403183)
+<!-- default badges end -->
 # Authenticate Users with the DevExpress Web API Service
 
 This example shows how to use our free [.NET App Security Library & Web API Service](https://www.devexpress.com/products/net/application_framework/security-web-api-service.xml) to implement authentication in your .NET MAUI application. A wizard helps you generate a ready-to-use authentication service. This service uses the [Entity Framework Core](https://docs.microsoft.com/en-us/ef/core/) ORM to access a database.    
