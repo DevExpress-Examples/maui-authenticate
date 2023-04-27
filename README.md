@@ -207,5 +207,6 @@ For more information, please refer to [Connect to local web services from Androi
 
 ## More Examples
 
-* [DevExpress Mobile UI for .NET MAUI](https://github.com/DevExpress-Examples/maui-demo-app/)
+* [Role-Based Data Access with the DevExpress Web API Service](https://github.com/DevExpress-Examples/maui-role-based-data-access)
 * [How to Create a Web API Service Backend for a .NET MAUI Application](https://www.devexpress.com/go/XAF_Security_NonXAF_MAUI.aspx)
+* [DevExpress Mobile UI for .NET MAUI](https://github.com/DevExpress-Examples/maui-demo-app/)
