@@ -7,7 +7,7 @@
 
 This example demonstrates how to use our free [.NET App Security & Web API Service](https://www.devexpress.com/products/net/application_framework/security-web-api-service.xml) to implement user authentication based on simple, form-based authentication logic (login/password). A wizard helps you generate a ready-to-use authentication service. This service uses the [Entity Framework Core](https://docs.microsoft.com/en-us/ef/core/) ORM to access a database.    
 
-<img src="https://user-images.githubusercontent.com/12169834/228162699-c9709a8f-c667-41f5-986d-198c9bfcdcf5.png" width="30%"/>
+<img src="https://github.com/DevExpress-Examples/maui-authenticate/assets/12169834/bb6dc4dc-7238-4f73-918a-3ded60532a60" width="30%"/>
 
 You can find more information about our Web API Service's access restrictions in the following resources:
 
