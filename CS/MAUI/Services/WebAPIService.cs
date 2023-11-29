@@ -2,7 +2,7 @@
 using System.Text;
 using System.Text.Json;
 using System.Text.Json.Nodes;
-using ON = DevExpress.Maui.Core.Internal.ON;
+using ON = DevExpress.Maui.Core.Internal.On;
 namespace MAUI.Services;
 
 public class WebAPIService : IDataStore {
