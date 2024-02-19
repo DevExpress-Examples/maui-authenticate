@@ -6,6 +6,7 @@
              IconImageSource="browse"
              xmlns:ios="clr-namespace:Microsoft.Maui.Controls.PlatformConfiguration.iOSSpecific;assembly=Microsoft.Maui.Controls"
              xmlns:dxc="clr-namespace:DevExpress.Maui.Controls;assembly=DevExpress.Maui.Controls"
+             xmlns:dx="clr-namespace:DevExpress.Maui.Core;assembly=DevExpress.Maui.Core"
              xmlns:viewModels="clr-namespace:MAUI.ViewModels"
              xmlns:webService="clr-namespace:MAUI.Services"
              ios:Page.UseSafeArea="true"
@@ -13,9 +14,9 @@
     <ContentPage.BindingContext>
         <viewModels:SuccessViewModel/>
     </ContentPage.BindingContext>
-    <VerticalStackLayout Padding="20">
-        <Image Source="devexpress.png" HorizontalOptions="Center" Margin="10"/>
+    <dx:DXStackLayout Orientation="Vertical" Padding="20">
+        <dx:DXImage Source="devexpress.png" HorizontalOptions="Center" Margin="10"/>
         <Label FontSize="30" Text="{Binding Header}" HorizontalOptions="Center" Margin="10"/>
         <Label Text="{Binding Info}" FontSize="20" HorizontalOptions="Center" Margin="10"/>
-    </VerticalStackLayout>
+    </dx:DXStackLayout>
 </ContentPage>
