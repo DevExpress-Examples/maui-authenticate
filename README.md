@@ -212,7 +212,7 @@ For more information, please refer to [Connect to local web services from Androi
 * [How to Create a Web API Service Backend for a .NET MAUI Application](https://www.devexpress.com/go/XAF_Security_NonXAF_MAUI.aspx)
 * [DevExpress Mobile UI for .NET MAUI](https://github.com/DevExpress-Examples/maui-demo-app/)
 <!-- feedback -->
-## Does this example address your development requirements/objectives?
+## Does This Example Address Your Development Requirements/Objectives?
 
 [<img src="https://www.devexpress.com/support/examples/i/yes-button.svg"/>](https://www.devexpress.com/support/examples/survey.xml?utm_source=github&utm_campaign=maui-authenticate&~~~was_helpful=yes) [<img src="https://www.devexpress.com/support/examples/i/no-button.svg"/>](https://www.devexpress.com/support/examples/survey.xml?utm_source=github&utm_campaign=maui-authenticate&~~~was_helpful=no)
 
